@@ -2,8 +2,8 @@
   <v-card>
     <v-card-title>
       <v-btn fab dark color="indigo" @click="addBrand">
-        <v-icon class="pt-3" dark>add</v-icon>
-      </v-btn>
+      <v-icon class="pt-3" dark>add</v-icon>
+    </v-btn>
       <v-btn fab dark color="error" @click="deleteAllBrand">
         <v-icon class="pt-3" dark>delete</v-icon>
       </v-btn>

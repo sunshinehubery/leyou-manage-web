@@ -47,7 +47,13 @@ export default {
     password: "",
     dialog: false,
     e1: false,
+    backPath:'',
   }),
+  beforeRouteEnter(to,from,next){
+    next(vm => {
+      vm._data.backPath = from.path;
+    });
+  },
   methods: {
     doLogin() {
       if (!this.username || !this.password) {
@@ -57,9 +63,10 @@ export default {
       const form = {};
       form.username = this.username;
       form.password = this.password;
-      this.$http.post("/user/login?username="+form.username+"&password="+form.password).then(resp => {
+      this.$http.post("/user/login",this.$qs.stringify(form)).then(resp => {
         if (resp.status === 200) {
           //页面跳转
+            window.sessionStorage.setItem('data',form.token);
             this.$router.push("/index/dashboard");
         }
       }).catch(() => {

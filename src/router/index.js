@@ -20,7 +20,7 @@ export default new Router({
     {
       path:"/", // 根路径，路由到 Layout组件
       component: () => import('../pages/Layout'),
-      redirect:"/index/dashboard",
+      redirect:"/login",
       children:[ // 其它所有组件都是 Layout的子组件
         route("/index/dashboard","/Dashboard","Dashboard"),
         //第一个参数:路径;第二个参数:对应的组件的位置
@@ -28,9 +28,14 @@ export default new Router({
         route("/item/brand",'/item/Brand',"Brand"),
         route("/item/goods",'/item/MyGoods','MyGoods'),
         route("/item/specification",'/item/Specification',"Specification"),
-        route("/user/statistics",'/item/Statistics',"Statistics"),
+        route("/member/statistics",'/member/Statistics',"Statistics"),
+        route("/member/manage",'/member/Manage',"Manage"),
+        route("/trade/stock",'/trade/Stock',"Stock"),
         route("/trade/promotion",'/trade/Promotion',"Promotion")
-      ]
+      ],
+      meta:{
+        needLogin:false
+      }
     }
   ]
 })

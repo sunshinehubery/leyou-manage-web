@@ -429,7 +429,7 @@
          * 将用户选择的相关信息显示到对应区域
          * @type {Array}
          */
-          //console.log(temp);
+        //console.log(temp);
         const editSpecialTemplate = [];
         temp.forEach(({params}) => {
           params.forEach(({k, v,options,global}) => {

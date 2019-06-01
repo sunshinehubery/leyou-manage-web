@@ -110,7 +110,16 @@
         drawer: true,// 左侧导航是否隐藏
         miniVariant: false,// 左侧导航是否收起
         title: '超市后台管理',// 顶部导航条名称,
-        menuMap: {}
+        menuMap: {},
+        username:'',
+      }
+    },
+    methods: {
+      loginOut(){
+        // 注销后 清除session信息 ，并返回登录页
+        window.sessionStorage.removeItem('data');
+        this.common.startHacking(this, 'success', '注销成功！');
+        this.$router.push('/index');
       }
     },
     computed: {

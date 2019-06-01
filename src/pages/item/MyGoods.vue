@@ -281,8 +281,8 @@
               this.$message.info(this.filter.saleable?"下架取消！":"上架取消！");
             })
         }else {
-          this.$message.info("选中后再进行操作！");
-        }
+        this.$message.info("选中后再进行操作！");
+  }
       },
     },
     components:{

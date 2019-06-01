@@ -19,24 +19,24 @@ var menus = [
   {
     action: "people",
     title: "会员管理",
-    path:"/user",
+    path:"/member",
     items: [
       { title: "会员统计", path: "/statistics" },
-      { title: "会员管理", path: "/list" }
+      { title: "会员管理", path: "/manage" }
     ]
   },
   {
     action: "attach_money",
-    title: "销售管理",
+    title: "进销管理",
     path:"/trade",
     items: [
-      { title: "交易统计", path: "/statistics" },
-      { title: "订单管理", path: "/order" },
-      { title: "物流管理", path: "/logistics" },
-      { title: "促销管理", path: "/promotion" }
+      { title: "商品库存", path: "/stock" },
+      { title: "进货管理", path: "/promotion" },
+      /*{ title: "物流管理", path: "/logistics" },
+      { title: "促销管理", path: "/promotion" }*/
     ]
   },
-  {
+  /*{
     action: "settings",
     title: "权限管理",
     path:"/authority",
@@ -45,7 +45,7 @@ var menus = [
       { title: "角色管理", path: "/role" },
       { title: "人员管理", path: "/member" }
     ]
-  }
+  }*/
 ]
 
 export default menus;
